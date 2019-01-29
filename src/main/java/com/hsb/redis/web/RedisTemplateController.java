@@ -1,15 +1,15 @@
 package com.hsb.redis.web;
 
-import com.hsb.redis.util.RedisKeyUtil;
+import com.hsb.redis.common.RedisKeyUtil;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import redis.clients.jedis.Jedis;
 
 /**
  * @author heshengbang
@@ -19,7 +19,8 @@ import redis.clients.jedis.Jedis;
  * email: trulyheshengbang@gmail.com
  */
 @RestController
-public class HelloController {
+@RequestMapping("/redisTemplate")
+public class RedisTemplateController {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 

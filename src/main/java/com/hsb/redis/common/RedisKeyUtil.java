@@ -1,4 +1,4 @@
-package com.hsb.redis.util;
+package com.hsb.redis.common;
 
 /**
  * @author heshengbang

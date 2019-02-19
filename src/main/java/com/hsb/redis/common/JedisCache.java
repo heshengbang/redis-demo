@@ -6,6 +6,7 @@ import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import org.springframework.core.annotation.AliasFor;
 
 /**
  * 提供Jedis上下文的写入
@@ -19,4 +20,8 @@ import java.lang.annotation.Target;
 @Inherited
 @Documented
 public @interface JedisCache {
+    @AliasFor("value")
+    String keyPrefix() default "";
+    @AliasFor("keyPrefix")
+    String value() default "";
 }
